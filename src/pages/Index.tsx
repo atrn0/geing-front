@@ -1,10 +1,11 @@
-import React, {useState} from 'react';
 import Form from "../components/Form";
+import {useState} from "react";
+import * as React from "react";
 
 function Index() {
   const [q, setQ] = useState('')
 
-  const handleChange = (e) => {
+  const handleChange = (e: any) => {
     setQ(e.target.value)
   }
 

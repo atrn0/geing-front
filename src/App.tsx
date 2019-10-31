@@ -1,6 +1,6 @@
-import React from 'react';
 import './App.css';
 import Index from "./pages/Index";
+import * as React from "react";
 
 function App() {
   return (
