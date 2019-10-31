@@ -1,5 +1,5 @@
-import me from "../me.jpg"
-import * as React from "react";
+import me from '../me.jpg'
+import * as React from 'react'
 
 const Header = () => {
   return (

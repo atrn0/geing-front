@@ -1,6 +1,6 @@
-import Form from "../components/Form";
-import {useState} from "react";
-import * as React from "react";
+import Form from '../components/Form'
+import * as React from 'react'
+import { useState } from 'react'
 
 function Index() {
   const [q, setQ] = useState('')
@@ -17,9 +17,9 @@ function Index() {
   return (
     <div className="Index">
       {/*<Header/>*/}
-      <Form q={q} onHandleChange={handleChange} onHandleSubmit={handleSubmit}/>
+      <Form q={q} onHandleChange={handleChange} onHandleSubmit={handleSubmit} />
     </div>
-  );
+  )
 }
 
-export default Index;
+export default Index
