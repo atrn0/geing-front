@@ -1,11 +1,11 @@
 import Form from '../components/Form'
 import * as React from 'react'
-import { useState } from 'react'
+import { ChangeEvent, FormEvent, useState } from 'react'
 
 function Index() {
   const [q, setQ] = useState('')
 
-  const handleChange = (e: any) => {
+  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     setQ(e.target.value)
   }
 
@@ -17,7 +17,7 @@ function Index() {
   return (
     <div className="Index">
       {/*<Header/>*/}
-      <Form q={q} onHandleChange={handleChange} onHandleSubmit={handleSubmit} />
+      <Form onHandleChange={handleChange} onHandleSubmit={handleSubmit} />
     </div>
   )
 }
