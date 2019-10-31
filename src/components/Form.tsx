@@ -2,6 +2,7 @@ import * as React from 'react'
 import { ChangeEvent } from 'react'
 
 type FormProps = {
+  q: string
   onHandleChange: (e: ChangeEvent<HTMLInputElement>) => void
   onHandleSubmit: (
     event: React.MouseEvent<HTMLButtonElement, MouseEvent>
@@ -15,7 +16,7 @@ const Form = (props: FormProps) => {
 
   return (
     <div>
-      <textarea onChange={handleChange} />
+      <textarea value={props.q} onChange={handleChange} />
       <button onClick={props.onHandleSubmit}>質問する</button>
     </div>
   )

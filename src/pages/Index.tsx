@@ -1,6 +1,7 @@
 import Form from '../components/Form'
 import * as React from 'react'
-import { ChangeEvent, FormEvent, useState } from 'react'
+import { ChangeEvent, useState } from 'react'
+import { submitQuestion } from '../client/geing/questions'
 
 function Index() {
   const [q, setQ] = useState('')
@@ -9,15 +10,20 @@ function Index() {
     setQ(e.target.value)
   }
 
-  const handleSubmit = () => {
-    console.log(q)
-    setQ('')
+  const handleSubmit = async () => {
+    try {
+      const res = await submitQuestion({ body: q })
+      console.log(res)
+      setQ('')
+    } catch (e) {
+      console.error(e)
+    }
   }
 
   return (
     <div className="Index">
       {/*<Header/>*/}
-      <Form onHandleChange={handleChange} onHandleSubmit={handleSubmit} />
+      <Form q={q} onHandleChange={handleChange} onHandleSubmit={handleSubmit} />
     </div>
   )
 }

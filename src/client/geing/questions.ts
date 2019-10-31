@@ -11,7 +11,11 @@ interface SubmitQuestionRes {
 const submitQuestion = async (
   req: SubmitQuestionReq
 ): Promise<SubmitQuestionRes> => {
-  return await geingInstance.post('/questions; charset=UTF-8', req)
+  return await geingInstance.post('/questions', req, {
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded'
+    }
+  })
 }
 
 export { SubmitQuestionReq, SubmitQuestionRes, submitQuestion }
