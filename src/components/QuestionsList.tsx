@@ -22,7 +22,7 @@ const QuestionsList = () => {
     <>
       <ul>
         {data.questions.map((q: Question) => {
-          return <li>{q.body}</li>
+          return <li key={q.id}>{q.body}</li>
         })}
       </ul>
     </>
