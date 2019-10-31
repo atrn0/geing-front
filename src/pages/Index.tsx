@@ -2,6 +2,8 @@ import Form from '../components/Form'
 import * as React from 'react'
 import { ChangeEvent, useState } from 'react'
 import { submitQuestion } from '../client/geing/questions'
+import Header from "../components/Header";
+import QuestionsList from "../components/QuestionsList";
 
 function Index() {
   const [q, setQ] = useState('')
@@ -22,8 +24,9 @@ function Index() {
 
   return (
     <div className="Index">
-      {/*<Header/>*/}
+      <Header/>
       <Form q={q} onHandleChange={handleChange} onHandleSubmit={handleSubmit} />
+      <QuestionsList />
     </div>
   )
 }

@@ -1,14 +1,14 @@
 import { geingInstance } from './common'
 
-interface SubmitQuestionReq {
+export interface SubmitQuestionReq {
   body: string
 }
 
-interface SubmitQuestionRes {
+export interface SubmitQuestionRes {
   question_body: string
 }
 
-const submitQuestion = async (
+export const submitQuestion = async (
   req: SubmitQuestionReq
 ): Promise<SubmitQuestionRes> => {
   return await geingInstance.post('/questions', req, {
@@ -17,5 +17,3 @@ const submitQuestion = async (
     }
   })
 }
-
-export { SubmitQuestionReq, SubmitQuestionRes, submitQuestion }
