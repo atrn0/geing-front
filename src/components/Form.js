@@ -1,21 +1,15 @@
 import React, {useState} from "react";
 
-const Form = () => {
-  const [q, setQ] = useState('')
+const Form = (props) => {
 
   const handleChange = (e) => {
-    setQ(e.target.value)
-  }
-
-  const handleSubmit = () => {
-    console.log(q)
-    setQ('')
+    props.onHandleChange(e)
   }
 
   return (
     <div>
-      <textarea value={q} onChange={handleChange}/>
-      <button onClick={handleSubmit}>質問する</button>
+      <textarea value={props.q} onChange={handleChange}/>
+      <button onClick={props.onHandleSubmit}>質問する</button>
     </div>
   )
 };
