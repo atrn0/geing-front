@@ -1,31 +1,31 @@
-import React from 'react'
-
-interface Question {
-  id: number
-  body: string
-  created_at: string
-}
+import React, { useEffect, useState } from "react";
+import { getQuestions, GetQuestionsRes } from "../client/geing/getQuestions";
+import Question from "../models/question";
 
 const QuestionsList = () => {
-  let questions: Question[] = [
-    {
-      id: 0,
-      body: 'this is a question1',
-      created_at: 'datestring'
-    },
-    {
-      id: 1,
-      body: 'this is a question2',
-      created_at: 'datestring'
+  const [data, setQuestions] = useState({ questions: [] as Question[] })
+
+  useEffect(() => {
+    const fetchQuestions = async (page: number) => {
+      const res: GetQuestionsRes = await getQuestions({ page: 0 })
+      setQuestions({ questions: res.questions })
     }
-  ]
+
+    try {
+      fetchQuestions(0)
+    } catch (e) {
+      console.error(e)
+    }
+  }, [])
 
   return (
-    <ul>
-      {questions.map(q => {
-        return <li>{q.body}</li>
-      })}
-    </ul>
+    <>
+      <ul>
+        {data.questions.map((q: Question) => {
+          return <li>{q.body}</li>
+        })}
+      </ul>
+    </>
   )
 }
 

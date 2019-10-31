@@ -1,21 +1,21 @@
 import { geingInstance } from "./common";
+import Question from "../../models/question";
 
 export interface GetQuestionsReq {
   page: number
 }
 
 export interface GetQuestionsRes {
-  id: number
-  body: string
-  created_at: string
+  questions: Question[]
 }
 
 export const getQuestions = async (
   req: GetQuestionsReq
 ): Promise<GetQuestionsRes> => {
-  return await geingInstance.get('/questions', {
+  const res = await geingInstance.get('/questions', {
     params: {
       page: req.page
     }
   })
+  return res.data
 }
