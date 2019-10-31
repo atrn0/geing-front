@@ -2,13 +2,6 @@
   "name": "geing-front",
   "version": "0.1.0",
   "private": true,
-  "dependencies": {
-    "react": "^16.11.0",
-    "react-dom": "^16.11.0",
-    "react-router-dom": "^5.1.2",
-    "react-scripts": "3.2.0",
-    "react-transition-group": "^4.3.0"
-  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -30,8 +23,18 @@
       "last 1 safari version"
     ]
   },
+  "dependencies": {
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.2.0",
+    "react-transition-group": "^4.3.0"
+  },
   "devDependencies": {
-    "ts-loader": "^6.2.1",
+    "@types/jest": "^24.0.21",
+    "@types/node": "^12.12.3",
+    "@types/react": "^16.9.11",
+    "@types/react-dom": "^16.9.3",
     "typescript": "^3.6.4"
   }
 }
