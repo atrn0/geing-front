@@ -9,7 +9,7 @@ type FormProps = {
   ) => void
 }
 
-const Form: React.FC<FormProps> = props => {
+const Form = (props: FormProps) => {
   const handleChange = (e: any) => {
     props.onHandleChange(e)
   }
