@@ -1,0 +1,14 @@
+.header {
+    background: #994242;
+    color: white;
+    > h2 {
+        margin: 0;
+        padding: 20px;
+        font-weight: normal;
+    }
+    > img {
+        padding-bottom: 20px;
+        width: 128px;
+        border-radius: 50%;
+    }
+}

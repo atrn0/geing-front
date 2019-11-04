@@ -1,9 +1,10 @@
-import Form from "../components/Form";
-import * as React from "react";
-import { ChangeEvent, useState } from "react";
-import Header from "../components/Header";
-import QuestionsList from "../components/QuestionsList";
-import { submitQuestion } from "../client/geing/submitQuestions";
+import Form from '../components/Form'
+import * as React from 'react'
+import { ChangeEvent, useState } from 'react'
+import Header from '../components/Header'
+import QuestionsList from '../components/QuestionsList'
+import { submitQuestion } from '../client/geing/submitQuestions'
+import styles from './Index.module.scss'
 
 function Index() {
   const [q, setQ] = useState('')
@@ -23,7 +24,7 @@ function Index() {
   }
 
   return (
-    <div className="Index">
+    <div className={styles.index}>
       <Header />
       <Form q={q} onHandleChange={handleChange} onHandleSubmit={handleSubmit} />
       <QuestionsList />
