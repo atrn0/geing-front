@@ -1,5 +1,6 @@
 import * as React from 'react'
 import { ChangeEvent } from 'react'
+import styles from './Form.module.scss'
 
 type FormProps = {
   q: string
@@ -15,9 +16,11 @@ const Form = (props: FormProps) => {
   }
 
   return (
-    <div>
+    <div className={styles.form}>
       <textarea value={props.q} onChange={handleChange} />
-      <button onClick={props.onHandleSubmit}>質問する</button>
+      <div>
+        <button onClick={props.onHandleSubmit}>質問する</button>
+      </div>
     </div>
   )
 }

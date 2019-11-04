@@ -1,0 +1,30 @@
+.form {
+  > textarea {
+    margin-top: 20px;
+    border: 2px solid #994242;
+    border-radius: 10px;
+    width: 80vw;
+    max-width: 400px;
+    height: 40vw;
+    max-height: 200px;
+    resize: none;
+    font-size: 1.2rem;
+    padding: 10px;
+    &:focus {
+      outline: none;
+      border: 2px solid #d74b4b;
+    }
+  }
+  button {
+    margin-top: 10px;
+    border-radius: 10px;
+    background: #994242;
+    color: white;
+    font-size: 1.2rem;
+    padding: 5px 9px;
+    border: none;
+    &:active {
+      background: #8d2121;
+    }
+  }
+}

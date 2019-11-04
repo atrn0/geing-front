@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
-import { getQuestions, GetQuestionsRes } from "../client/geing/getQuestions";
-import Question from "../models/question";
+import React, { useEffect, useState } from 'react'
+import { getQuestions, GetQuestionsRes } from '../client/geing/getQuestions'
+import Question from '../models/question'
 
 const QuestionsList = () => {
   const [data, setQuestions] = useState({ questions: [] as Question[] })

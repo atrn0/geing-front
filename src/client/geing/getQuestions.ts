@@ -1,5 +1,5 @@
-import { geingInstance } from "./common";
-import Question from "../../models/question";
+import { geingInstance } from './common'
+import Question from '../../models/question'
 
 export interface GetQuestionsReq {
   page: number
