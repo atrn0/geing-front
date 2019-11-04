@@ -1,7 +1,27 @@
 .questions {
   margin-top: 20px;
-  > img {
-    margin-top: 10px;
-    max-width: 100%;
+  text-align: left;
+  > div {
+    margin-top: 30px;
+    > span {
+      padding: 5px 10px;
+      margin: 10px;
+      background: #994242;
+      color: white;
+      border-radius: 14px;
+      font-size: 0.7rem;
+    }
+    > img {
+      margin-top: 10px;
+      max-width: 100%;
+    }
+    > div {
+      text-align: right;
+      > a {
+        text-decoration: none;
+        color: #994242;
+        margin: 5px;
+      }
+    }
   }
 }
