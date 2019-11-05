@@ -1,0 +1,10 @@
+.appBar {
+    background: #eeeeee;
+    border-bottom: 1px solid gray;
+    > h2 {
+        margin: 0;
+        padding: 10px;
+        font-weight: normal;
+        font-size: 1rem;
+    }
+}
