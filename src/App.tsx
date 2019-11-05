@@ -1,11 +1,19 @@
 import './App.css'
 import Index from './pages/Index'
 import * as React from 'react'
+import { BrowserRouter, Switch, Route, useLocation } from 'react-router-dom'
+import QAndA from './pages/QAndA'
 
 function App() {
+
   return (
     <div className="App">
-      <Index />
+      <BrowserRouter>
+        <Switch>
+          <Route path={'/:id'} children={<QAndA />} />
+          <Route path={'/'} children={<Index />} />
+        </Switch>
+      </BrowserRouter>
     </div>
   )
 }

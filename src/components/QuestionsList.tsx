@@ -3,8 +3,11 @@ import { getQuestions, GetQuestionsRes } from '../client/geing/getQuestions'
 import Question from '../models/question'
 import styles from './QuestionsList.module.scss'
 import dayjs from 'dayjs'
+import { BrowserRouter, Link, useLocation } from 'react-router-dom'
+import QAndA from '../pages/QAndA'
 
 const QuestionsList = () => {
+  const location = useLocation()
   const [data, setQuestions] = useState({ questions: [] as Question[] })
 
   useEffect(() => {
@@ -33,9 +36,7 @@ const QuestionsList = () => {
                   q.body
                 )},w_700,y_-15/geing-ogp`}
               />
-              <div>
-                <a href="#">回答をみる</a>
-              </div>
+              <Link to={`/${q.id}`}>回答をみる</Link>
             </div>
           )
         })}
