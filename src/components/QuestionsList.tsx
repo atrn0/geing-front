@@ -3,10 +3,9 @@ import { getQuestions, GetQuestionsRes } from '../client/geing/getQuestions'
 import Question from '../models/question'
 import styles from './QuestionsList.module.scss'
 import dayjs from 'dayjs'
-import { Link, useLocation } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 const QuestionsList = () => {
-  const location = useLocation()
   const [data, setQuestions] = useState({ questions: [] as Question[] })
 
   useEffect(() => {
