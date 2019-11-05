@@ -26,7 +26,7 @@ const QuestionsList = () => {
       <div className={styles.questions}>
         {data.questions.map((q: Question) => {
           return (
-            <div key={q.id}>
+            <Link key={q.id} to={`/${q.id}`}>
               <span>{dayjs(q.created_at).format('MM/DD')}</span>
               <img
                 alt={q.body}
@@ -34,8 +34,10 @@ const QuestionsList = () => {
                   q.body
                 )},w_700,y_-15/geing-ogp`}
               />
-              <Link to={`/${q.id}`}>回答をみる</Link>
-            </div>
+              <div>
+                <span>回答をみる</span>
+              </div>
+            </Link>
           )
         })}
       </div>

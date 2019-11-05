@@ -1,8 +1,10 @@
 .questions {
   margin-top: 20px;
   text-align: left;
-  > div {
+  > a {
+    display: block;
     margin-top: 30px;
+    text-decoration: none;
     > span {
       padding: 5px 10px;
       margin: 10px;
@@ -17,8 +19,7 @@
     }
     > div {
       text-align: right;
-      > a {
-        text-decoration: none;
+      > span {
         color: #994242;
         margin: 5px;
       }
