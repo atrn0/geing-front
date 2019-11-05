@@ -27,5 +27,8 @@
     &:active {
       background: #8d2121;
     }
+    &:disabled {
+      background: #555;
+    }
   }
 }

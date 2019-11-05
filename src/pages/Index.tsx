@@ -10,7 +10,7 @@ function Index() {
   const [q, setQ] = useState('')
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-    setQ(e.target.value)
+    setQ(e.target.value.replace(/\n/g, ''))
   }
 
   const handleSubmit = async () => {
