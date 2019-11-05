@@ -3,6 +3,7 @@ import { useHistory, useParams } from 'react-router-dom'
 import { getQA, GetQARes } from '../client/geing/getQA'
 import styles from './QAndA.module.scss'
 import dayjs from 'dayjs'
+import me from '../me.jpg'
 
 const QAndA = () => {
   const { id } = useParams()
@@ -27,6 +28,10 @@ const QAndA = () => {
     }
   }, [history, id])
 
+  const goBack = () => {
+    history.goBack()
+  }
+
   if (qa.question) {
     return (
       <div className={styles.qanda}>
@@ -39,6 +44,14 @@ const QAndA = () => {
             qa.question
           )},w_700,y_-15/geing-ogp`}
         />
+        <div className={styles.profile}>
+          <img src={me} alt="me" />
+          <span>あたらん</span>
+        </div>
+        <div className={styles.answer}>{qa.answer}</div>
+        <div className={styles.goBackButton}>
+          <button onClick={goBack}>他の回答をみる</button>
+        </div>
       </div>
     )
   }
