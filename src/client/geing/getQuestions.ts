@@ -17,5 +17,13 @@ export const getQuestions = async (
       page: req.page
     }
   })
+
+  // when no content
+  if (res.status === 204) {
+    return {
+      questions: []
+    }
+  }
+
   return res.data
 }
