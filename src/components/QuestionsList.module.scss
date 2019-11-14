@@ -26,3 +26,16 @@
     }
   }
 }
+
+.moreButton {
+  text-align: center;
+  margin: 20px;
+  > button {
+    margin: 0 auto;
+    border: 2px solid #994242;
+    font-size: 1rem;
+    border-radius: 200px;
+    padding: 5px 10px;
+    background: white;
+  }
+}

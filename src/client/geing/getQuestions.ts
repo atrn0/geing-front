@@ -2,7 +2,7 @@ import { geingInstance } from './common'
 import Question from '../../models/question'
 
 export interface GetQuestionsReq {
-  page: number
+  offset: number
 }
 
 export interface GetQuestionsRes {
@@ -14,7 +14,7 @@ export const getQuestions = async (
 ): Promise<GetQuestionsRes> => {
   const res = await geingInstance.get('/questions', {
     params: {
-      page: req.page
+      offset: req.offset
     }
   })
 
