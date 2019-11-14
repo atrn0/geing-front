@@ -12,7 +12,7 @@ const QuestionsList = () => {
 
   const fetchQuestions = async (offset: number) => {
     const res: GetQuestionsRes = await getQuestions({ offset: offset })
-    if (res.questions.length < 20) {
+    if (res.questions.length < 10) {
       setIsAllQFetched(true)
     }
     setQuestions({ questions: res.questions })
