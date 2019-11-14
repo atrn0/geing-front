@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { useHistory, useParams } from 'react-router-dom'
+import { Link, useHistory, useParams } from 'react-router-dom'
 import { getQA, GetQARes } from '../client/geing/getQA'
 import styles from './QAndA.module.scss'
 import dayjs from 'dayjs'
@@ -29,10 +29,6 @@ const QAndA = () => {
     }
   }, [history, id])
 
-  const goBack = () => {
-    history.goBack()
-  }
-
   const getQImageUrl = () => {
     return `https://res.cloudinary.com/dfrif3y8l/image/upload/w_800/c_fit,q_10,h_300,l_text:omklw31ggvthvlk7b8i3.ttf_40:${encodeURIComponent(
       qa.question
@@ -55,9 +51,9 @@ const QAndA = () => {
           <span>あたらん</span>
         </div>
         <div className={styles.answer}>{qa.answer}</div>
-        <div className={styles.goBackButton}>
-          <button onClick={goBack}>他の回答をみる</button>
-        </div>
+        <Link className={styles.goBackButton} to={'/'}>
+          <button>他の回答をみる</button>
+        </Link>
       </div>
     )
   }
