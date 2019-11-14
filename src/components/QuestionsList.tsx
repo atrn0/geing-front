@@ -15,12 +15,12 @@ const QuestionsList = () => {
     if (res.questions.length < 10) {
       setIsAllQFetched(true)
     }
-    setQuestions({ questions: res.questions })
+    setQuestions({ questions: data.questions.concat(res.questions) })
   }
 
   useEffect(() => {
     try {
-      fetchQuestions(0)
+      fetchQuestions(10000000)
     } catch (e) {
       console.error(e)
     }
