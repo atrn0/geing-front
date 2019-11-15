@@ -47,5 +47,11 @@
     "react-helmet": "^5.2.1",
     "react-snap": "^1.23.0",
     "typescript": "^3.6.4"
+  },
+  "reactSnap": {
+    "include": [
+      "/",
+      "/all-q"
+    ]
   }
 }

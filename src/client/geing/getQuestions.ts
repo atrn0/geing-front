@@ -2,7 +2,8 @@ import { geingInstance } from './common'
 import Question from '../../models/question'
 
 export interface GetQuestionsReq {
-  offset: number
+  offset?: number
+  limit?: number
 }
 
 export interface GetQuestionsRes {
@@ -13,9 +14,7 @@ export const getQuestions = async (
   req: GetQuestionsReq
 ): Promise<GetQuestionsRes> => {
   const res = await geingInstance.get('/questions', {
-    params: {
-      offset: req.offset
-    }
+    params: req
   })
 
   // when no content
