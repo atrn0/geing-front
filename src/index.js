@@ -10,4 +10,4 @@ if (rootElement.hasChildNodes()) {
 } else {
   ReactDOM.render(<App />, rootElement)
 }
-serviceWorker.unregister()
+serviceWorker.register()
