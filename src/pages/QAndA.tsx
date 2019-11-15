@@ -5,6 +5,7 @@ import styles from './QAndA.module.scss'
 import dayjs from 'dayjs'
 import me from '../me.jpg'
 import Helmet from 'react-helmet'
+import { getOgpImage } from '../utils/cloudinary'
 
 const QAndA = () => {
   const { id } = useParams()
@@ -30,9 +31,7 @@ const QAndA = () => {
   }, [history, id])
 
   const getQImageUrl = () => {
-    return `https://res.cloudinary.com/dfrif3y8l/image/upload/w_800/c_fit,q_10,h_300,l_text:omklw31ggvthvlk7b8i3.ttf_40:${encodeURIComponent(
-      qa.question
-    )},w_700,y_-15/geing-ogp`
+    return getOgpImage(qa.question)
   }
 
   if (qa.question) {
