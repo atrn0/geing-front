@@ -39,7 +39,7 @@
     "case-sensitive-paths-webpack-plugin": "2.2.0",
     "css-loader": "2.1.1",
     "dayjs": "^1.8.16",
-    "dotenv": "6.2.0",
+    "dotenv": "8.2.0",
     "dotenv-expand": "5.1.0",
     "eslint": "^6.1.0",
     "eslint-config-react-app": "^5.0.2",
